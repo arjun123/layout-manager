@@ -1,0 +1,52 @@
+
+<div class="page">
+    <div class="example-layout">
+        <div class="layout-template-wrapper">
+            <div class="main-wrapper">
+                <div class="main-container" css-change="main-container" data-ng-class="selectedLayout.className">
+                    <div class="col-left" css-change="col-left" data-ng-if="selectedLayout.colLeft">
+                    </div>
+                    <div class="col-main" css-change="col-main">
+                        <div class="col-l-left" css-change="col-l-left" data-ng-if="selectedLayout.colLLeft">
+                        </div>
+                        <div class="main" css-change="main">
+                        </div>
+                        <div class="col-r-right" css-change="col-r-right" data-ng-if="selectedLayout.colRRight">
+                        </div>
+                    </div>
+                    <div class="col-right" css-change="col-right"  data-ng-if="selectedLayout.colRight">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-left">
+        <div class="set-layout-wrapper">
+            <h3>{{selectedDiv}}</h3>
+            <form>
+                <div class="form-element">
+                    <p><label for="{{selectedDiv}}-width">Width</label><input type="text" id="{{selectedDiv}}-width" data-ng-model="selectedDivCss.width"></p>
+                    <p><label for="{{selectedDiv}}-padding">Padding</label><input type="text" id="{{selectedDiv}}-padding" data-ng-model="selectedDivCss.padding"></p>
+                    <p><label for="{{selectedDiv}}-background">Background Color</label><input type="text" id="{{selectedDiv}}-background" data-ng-model="selectedDivCss.background"></p>
+
+                    <div class="btn-orange btn-small">
+                        <a title="Next" data-ng-click="setLayoutCss(selectedDiv)" href="javascript:void(0)">Set</a>
+                    </div>
+                </div>
+
+            </form>
+
+
+        </div>
+    </div>
+    <div class="page-right">
+        <div class="editor">
+            <pre>
+                {{selectedLayoutCss}}
+            </pre>
+
+
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,327 @@
+{
+  "layouts": [
+    {
+      "className": "col-1-layout",
+      "colLeft": false,
+      "colLLeft": false,
+      "colRRight": false,
+      "colRight": false,
+      "css": {
+        "width": "62.625em",
+        "padding": "0",
+        "background": "none"
+      },
+      "child": [
+        {
+          "className": "col-main",
+          "css":{
+            "width":"100%",
+            "padding":"0",
+            "background":"none"
+          },
+          "child": [
+            {
+              "className": "main",
+              "css": {
+                "width":"100%",
+                "padding":"0",
+                "background":"none"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "col-2-right-layout",
+      "colLeft": false,
+      "colLLeft": false,
+      "colRRight": false,
+      "colRight": true,
+      "css": {
+        "width": "62.625em",
+        "padding": "0",
+        "background": "none"
+      },
+      "child": [
+        {
+          "className": "col-main",
+          "css":{
+            "width":"75%",
+            "padding":"0",
+            "background":"none",
+            "float":"left"
+          },
+          "child": [
+            {
+              "className": "main",
+              "css": {
+                "width":"100%",
+                "padding":"0",
+                "background":"none"
+              }
+            }
+          ]
+        },
+        {
+          "className": "col-right",
+          "css": {
+            "width":"22%",
+            "padding":"0",
+            "float":"right",
+            "background":"none"
+          }
+        }
+      ]
+    },
+    {
+      "className": "col-2-left-layout",
+      "colLeft": true,
+      "colLLeft": false,
+      "colRRight": false,
+      "colRight": false,
+      "css": {
+        "width": "62.625em",
+        "padding": "0",
+        "background": "none"
+      },
+      "child": [
+        {
+          "className": "col-left",
+          "css": {
+            "width":"22%",
+            "padding":"0",
+            "float":"left",
+            "background":"none"
+          }
+        },
+        {
+          "className": "col-main",
+          "css":{
+            "width":"75%",
+            "padding":"0",
+            "background":"none",
+            "float":"right"
+          },
+          "child": [
+            {
+              "className": "main",
+              "css": {
+                "width":"100%",
+                "padding":"0",
+                "background":"none"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "col-3-right-layout",
+      "colLeft": false,
+      "colLLeft": true,
+      "colRRight": false,
+      "colRight": true,
+      "css": {
+        "width":"62.625em",
+        "padding":"0",
+        "background":"none"
+      },
+      "child": [
+        {
+          "className": "col-main",
+          "css":{
+            "width":"75%",
+            "padding":"0",
+            "background":"none",
+            "float":"left"
+          },
+          "child": [
+            {
+              "className": "col-l-left",
+              "css": {
+                "width":"34%",
+                "padding":"0",
+                "float":"left",
+                "background":"none"
+              }
+            },
+            {
+              "className": "main",
+              "css": {
+                "width":"73%",
+                "padding":"0",
+                "background":"none"
+              }
+            }
+          ]
+        },
+        {
+          "className": "col-right",
+          "css": {
+            "width":"22%",
+            "padding":"0",
+            "float":"right",
+            "background":"none"
+          }
+        }
+      ]
+    },
+    {
+      "className": "col-3-left-layout",
+      "colLeft": true,
+      "colLLeft": false,
+      "colRRight": true,
+      "colRight": false,
+      "css": {
+        "width":"62.625em",
+        "padding":"0",
+        "background":"none"
+      },
+      "child": [
+        {
+          "className": "col-left",
+          "css": {
+            "width":"22%",
+            "padding":"0",
+            "float":"left",
+            "background":"none"
+          }
+        },
+        {
+          "className": "col-main",
+          "css":{
+            "width":"75%",
+            "padding":"0",
+            "background":"none",
+            "float":"right"
+          },
+          "child": [
+            {
+              "className": "main",
+              "css": {
+                "width":"73%",
+                "padding":"0",
+                "background":"none",
+                "float":"left"
+              }
+            },
+           {
+              "className": "col-r-right",
+              "css": {
+                "width":"34%",
+                "padding":"0",
+                "background":"none",
+                "float":"right"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "className": "col-3-r-right-layout",
+      "colLeft": false,
+      "colLLeft": false,
+      "colRRight": true,
+      "colRight": true,
+      "css": {
+        "width":"62.625em",
+        "padding":"0",
+        "background":"none"
+      },
+      "child": [
+        {
+          "className": "col-main",
+          "css":{
+            "width":"75%",
+            "padding":"0",
+            "background":"none",
+            "float":"left"
+          },
+          "child": [
+            {
+              "className": "main",
+              "css": {
+                "width":"73%",
+                "padding":"0",
+                "background":"none",
+                "float":"left"
+              }
+            },
+             {
+              "className": "col-r-right",
+              "css": {
+                "width":"34%",
+                "padding":"0",
+                "background":"none",
+                "float":"right"
+              }
+            }
+          ]
+        },
+        {
+          "className": "col-right",
+          "css": {
+            "width":"22%",
+            "padding":"0",
+            "float":"right",
+            "background":"none"
+          }
+        }
+      ]
+    },
+    {
+      "className": "col-3-l-left-layout",
+      "colLeft": true,
+      "colLLeft": true,
+      "colRRight": false,
+      "colRight": false,
+      "css": {
+        "width":"62.625em",
+        "padding":"0",
+        "background":"none"
+      },
+      "child": [
+        {
+          "className": "col-left",
+          "css": {
+            "width":"22%",
+            "padding":"0",
+            "float":"left",
+            "background":"none"
+          }
+        },
+        {
+          "className": "col-main",
+          "css":{
+            "width":"75%",
+            "padding":"0",
+            "background":"none",
+            "float":"right"
+          },
+          "child": [
+            {
+              "className": "col-l-left",
+              "css": {
+                "width":"34%",
+                "padding":"0",
+                "float":"left",
+                "background":"none"
+              }
+            },
+            {
+              "className": "main",
+              "css": {
+                "width":"73%",
+                "padding":"0",
+                "background":"none",
+                "float":"right"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+<div class="main-wrapper">
+    <div class="page">
+      <div class="container">
+        <header>
+          <h1>Layout management</h1>
+        </header>
+        <main>
+        <h2>Select Layout</h2>
+          <div class="list-global">
+            <ul>
+              <li  data-ng-repeat="layout in layouts">
+                {{layout.className}}
+                <div class="img-block" data-layout-select>
+                  <img src="images/{{layout.className}}.png" alt="{{layout.className}}">
+                  <span class="checked">
+                    <input type="checkbox" checklist-model="user.layouts" checklist-value="$index">
+                  </span>
+                </div>
+              </li>
+            </ul>
+            <div class="btn-orange">
+              <a href="javascript:void(0)" data-ng-click="nextStep()" title="Next">Next</a>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>

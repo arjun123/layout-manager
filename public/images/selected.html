@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Layout Management</title>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,400italic' rel='stylesheet' type='text/css'>
+  <style>
+    *{
+      margin:0;
+      padding: 0;
+    }
+    *:after{
+      clear: both;
+      content: "";
+      display: block;
+    }
+    body{
+      font:400 16px/1 'Roboto', sans-serif;
+    }
+    ul{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    img{
+      max-width: 100%;
+      vertical-align: middle;
+    }
+    h1,h2,h3,h4,h5,h6{
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+    h1{
+      font-size: 40px;
+      border-bottom: 1px solid #ff6633;
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+      text-align: center;
+      color:#ff6633;
+    }
+    a{
+      font:300 25px/1 'Roboto', sans-serif;
+      -webkit-transition: all .5s ease;
+      -moz-transition: all .5s ease;
+      -ms-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      transition: all .5s ease;
+      text-decoration: none;
+      color: #000
+    }
+    .btn-orange a{
+      background: rgba(0,0,0,.6);
+      padding: 20px 60px;
+      color: #FFF;
+      float: right;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .btn-orange a:hover{
+      background:#ff6633;
+    }
+    .container{
+      width: 1170px;
+      margin: 0 auto;
+    }
+    header{
+      padding: 30px 0 0 0;
+    }
+    .list-global{
+      width: 100%;
+    }
+    .list-global li{
+      float: left;
+      margin-bottom: 50px;
+      width: 32%;
+      margin-left: 2%;
+      text-transform: uppercase;
+      font:300 25px/1 'Roboto', sans-serif;
+      text-align: center;
+    }
+    .list-global li:nth-child(3n+1){
+      margin-left: 0;
+    }
+    .list-global li .img-block{
+      position: relative;
+      border:1px solid rgba(0,0,0,.05);
+      padding: 15px;
+      margin-top: 20px;
+      cursor: pointer;
+      -webkit-transition: all .5s ease;
+      -moz-transition: all .5s ease;
+      -ms-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      transition: all .5s ease;
+    }
+    .list-global li .img-block:hover{
+      border-color:#ff6633;
+    }
+    .list-global li .img-block span{
+      width: 36px;
+      height: 36px;
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+    }
+    input[type="checkbox"]{
+
+    }
+    input[type="checkbox"] + label {
+      display:inline-block;
+      width:36px;
+      height:36px;
+      margin:-1px 4px 0 0;
+      vertical-align:middle;
+      background:url(images/icon-check-blank.png) left top no-repeat;
+      cursor:pointer;
+    }
+
+    input[type="checkbox"]:checked + label {
+      background:url(images/icon-check.png) left top no-repeat;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-wrapper">
+    <div class="page">
+      <div class="container">
+        <header>
+          <h1>Layout management</h1>
+        </header>
+        <main>
+          <div class="main-wrapper">
+            <div class="main-wrapper-content">
+              <div class="layout-header">
+                <h2>Col1 Layout</h2>
+                <div class="generate-button"><input type="submit" value="Next"></div>
+              </div>
+              <div class="page">
+                <div class="page-left">
+                  <div class="sample-layout-wrapper">
+                    <img src="images/layout.png" width="400px">
+                  </div>
+                  <div class="set-layout-wrapper">
+                    <h3>Col1 layout</h3>
+                    <form>
+                      <p><label>Width</label><input type="text" id="width" value="100%"></p>
+                      <p><label>Height</label><input type="text" id="width" value="100%"></p>
+                      <p><label>Padding</label><input type="text" id="width" value="100%"></p>
+                      <p><label>Margin</label><input type="text" id="width" value="100%"></p>
+                    </form>
+                  </div>
+
+                </div>
+                <div class="page-right">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : Jun 2, 2015, 2:15:58 PM
+    Author     : Niraj Rajbhandari <nirajrajbhandari@lftechnology.com>
+*/
+div::after{
+    display:block;
+    clear:both;
+    content: "";
+}
+
+.main-container{
+    width:480px;
+    padding:10px;
+    background:#B3A81A;
+}
+
+
+
+.col-left{
+    background:#877334;
+    min-height:200px;
+    height:auto !important;
+    height:200px;
+}
+.col-main{
+    background: #431414;
+    padding:5px;
+}
+.main{
+    background:#2E5C87;
+    min-height:190px;
+    height:auto !important;
+    height:190px;
+}
+.col-l-left{
+    background:#999177;
+    min-height:190px;
+    height:auto !important;
+    height:190px;
+}
+.col-r-right{
+    background:#254D1A;
+    min-height:190px;
+    height:auto !important;
+    height:190px;
+}
+.col-right{
+    background:#86A37F;
+    min-height:200px;
+    height:auto !important;
+    height:200px;
+}
+
+.main-container.col-2-left-layout .col-left,.main-container.col-3-left-layout .col-left,.main-container.col-3-l-left-layout .col-left{
+    width:115px;
+    float:left;
+}
+.main-container.col-2-left-layout .col-main,.main-container.col-3-left-layout .col-main,.main-container.col-3-l-left-layout .col-main{
+    width:320px;
+    float:right;
+}
+
+.main-container.col-2-right-layout .col-right,.main-container.col-3-right-layout .col-right,.main-container.col-3-r-right-layout .col-right{
+    width:115px;
+    float:right;
+}
+.main-container.col-2-right-layout .col-main,.main-container.col-3-right-layout .col-main,.main-container.col-3-r-right-layout .col-main{
+    width:320px;
+    float:left;
+}
+.main-container.col-3-right-layout .col-main .col-l-left,.main-container.col-3-l-left-layout .col-main .col-l-left{
+    width: 115px;
+    float:left;
+}
+.main-container.col-3-right-layout .col-main .main,.main-container.col-3-l-left-layout .col-main .main{
+    width:180px;
+    float:right;
+}
+.main-container.col-3-left-layout .col-main .main,.main-container.col-3-r-right-layout .col-main .main{
+    width:180px;
+    float:left;
+}
+.main-container.col-3-left-layout .col-main .col-r-right,.main-container.col-3-r-right-layout .col-main .col-r-right{
+    width: 115px;
+    float:right;
+}

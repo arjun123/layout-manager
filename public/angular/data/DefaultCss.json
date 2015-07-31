@@ -1,0 +1,42 @@
+{
+  "main-container": {
+    "width":"62.625em",
+    "padding":"0",
+    "background":"none"
+
+  },
+  "col-left":{
+    "width":"22%",
+    "padding":"0",
+    "float":"left",
+    "background":"none"
+  },
+  "col-main":{
+    "width":"75%",
+    "padding":"0",
+    "background":"none"
+  },
+  "col-l-left":{
+    "width":"34%",
+    "padding":"0",
+    "float":"left",
+    "background":"none"
+  },
+  "col-r-right":{
+    "width":"34%",
+    "padding":"0",
+    "background":"none",
+    "float":"right"
+  },
+  "main":{
+    "width":"34%",
+    "padding":"0",
+    "background":"none"
+  },
+  "col-right":{
+    "width":"22%",
+    "padding":"0",
+    "float":"right",
+    "background":"none"
+  }
+}

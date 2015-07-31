@@ -1,0 +1,37 @@
+<div class="main-wrapper">
+    <div class="page">
+        <div class="container">
+            <header>
+                <h1>Layout management</h1>
+            </header>
+            <main>
+                <div class="list-global">
+                    <div class="main-wrapper">
+                        <div class="main-wrapper-content">
+                            <accordion close-others="true">
+                                <accordion-group is-open="layout.isOpen"
+                                                 data-ng-repeat="layout in user.selectedLayouts">
+                                    <accordion-heading>
+                                        {{layout.className}}
+                                    </accordion-heading>
+                                    <div data-set-layout="$index">
+                                    </div>
+                                </accordion-group>
+                            </accordion>
+                            <div class="bottom-wrapper">
+                                <div class="bottom-wrapper-left flt-left btn-orange">
+                                    <a href="javascript:void(0)" data-ng-click="previousStep()">Previous </a>
+                                </div>
+                                <div class="bottom-wrapper-right flt-right btn-orange">
+                                    <a href="javascript:void(0)" data-ng-click="generateLayout()">
+                                        Generate
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
