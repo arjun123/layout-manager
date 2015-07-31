@@ -88,7 +88,7 @@
         LayoutServices.generateLayout=function(layoutInfo){
             return $http({
                 method:"POST",
-                url:CONSTANT.BASE_URL+'layout/generate',
+                url:CONSTANT.BASE_URL+'/generate',
                 data:layoutInfo
             });
         };

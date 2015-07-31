@@ -2,7 +2,7 @@
     "use strict";
     var constants={
         "UNDEFINED":"undefined",
-        "BASE_URL":"http://localhost:3000/api/",
+        "BASE_URL":"http://localhost:8000/api",
         "MAIN_CONTAINER":"main-container",
         "COL_LEFT":"col-left"
     };
