@@ -14,4 +14,4 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::resource('/api/generate','LayoutController@index');
+Route::resource('/api/generate','LayoutController@store');
