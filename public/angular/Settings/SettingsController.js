@@ -27,7 +27,6 @@
             }
             LayoutFactory.generateLayout(data)
                 .success(function (response) {
-                    console.log(response.url, 'test');
                     // window.location.href = 'http://localhost:8000/'+response.url;
                 }).error(function (error) {
 

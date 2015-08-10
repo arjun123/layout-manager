@@ -3,13 +3,24 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Layout;
+use App\LayoutManager\Services\Layout as LayoutService;
 
 class LayoutController extends Controller
-{
+{   
+    /**
+     * @var LayoutService
+     */
+    protected $layout;
+    
+    /**
+     * @param LayoutService  $layout
+     */
+    public function __construct(LayoutService $layout)
+    {
+        $this->layout  = $layout;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -39,25 +50,8 @@ class LayoutController extends Controller
      */
     public function store(Request $request)
     {
-        $tree = $request->all();
-        $layouts = $tree['layout_info'];
-        $cssInfo = $tree['css_info'];
-
-        $dir = uniqid();
-        $modelObj = new Layout() ;
-        $modelObj->initDirs($dir);
-
-        $cssFile = $modelObj->createCssFile($dir);
-
-        $modelObj->writeCssInfo($cssFile, $cssInfo);
-
-        foreach($layouts as $layout) {
-        	//write html
-        	$htmlFile = $modelObj->createHTMLFile($dir, $layout['className']);
-        	fwrite($htmlFile, $modelObj->getHTMLPre());
-        	$modelObj->writeDivWithChlid($htmlFile, $cssFile, $layout['className'], $layout);
-        	fwrite($htmlFile, $modelObj->getHTMLPost());
-        }
+        $layoutDetails = $request->all();
+        $this->layout->create($layoutDetails);
     }
 
     /**
