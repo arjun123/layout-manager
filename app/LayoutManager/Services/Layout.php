@@ -10,7 +10,7 @@ class Layout
 
     /**
      *
-     * @var Directory
+     * @var Unqiue directory
      */
     protected $directory;
 
@@ -19,6 +19,11 @@ class Layout
      * @var Storage path 
      */
     protected $storagePath;
+    
+    /**
+     * @var Directory path
+     */
+    protected $directoryPath;
 
     /**
      * Initialize require variables.
@@ -46,6 +51,28 @@ class Layout
             $this->writeDivWithChlid($htmlFile, $cssFile, $layout['className'], $layout);
             fwrite($htmlFile, $this->getHTMLPost());
         }
+        // Zip the directory
+        $this->zip();
+        
+        return $this->directory;
+    }
+
+    /**
+     * Create the zip file.
+     * 
+     * @return string $zipFilePath Path of created zip file
+     */
+    public function zip()
+    {
+        $zipper = new \Chumper\Zipper\Zipper;
+        $zipFilePath = $this->storagePath . '/output/' . $this->directory . '/layout.zip';
+        $zipper->make($zipFilePath)->folder('layout')->add(
+            array(
+                $this->storagePath . '/output/' . $this->directory
+            )
+        );
+        
+        return $zipFilePath;
     }
 
     /**
@@ -56,10 +83,12 @@ class Layout
         if (!file_exists($this->storagePath . '/output')) {
             mkdir($this->storagePath . '/output');
         }
+        
         mkdir($this->storagePath . '/output/' . $this->directory);
-        mkdir($this->storagePath . '/output/' . $this->directory . '/css');
-        mkdir($this->storagePath . '/output/' . $this->directory . '/images');
-        mkdir($this->storagePath . '/output/' . $this->directory . '/js');
+        $this->directoryPath = $this->storagePath . '/output/' . $this->directory;
+        mkdir($this->directoryPath . '/css');
+        mkdir($this->directoryPath . '/images');
+        mkdir($this->directoryPath . '/js');
     }
 
     /**
@@ -69,7 +98,7 @@ class Layout
      */
     public function createCssFile()
     {
-        return fopen($this->storagePath . '/output/' . $this->directory . '/css/layout.css', "w+");
+        return fopen($this->directoryPath . '/css/layout.css', "w+");
     }
 
     /**
@@ -160,6 +189,6 @@ class Layout
      */
     public function createHTMLFile($name)
     {
-        return fopen($this->storagePath . '/output/' . $this->directory . '/' . $name . '.html', "w+");
+        return fopen($this->directoryPath . '/' . $name . '.html', "w+");
     }
 }

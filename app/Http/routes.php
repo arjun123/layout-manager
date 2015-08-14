@@ -10,8 +10,6 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 Route::resource('/api/generate','LayoutController@store');
+Route::get('/api/layout/download/{directory}', 'LayoutController@download');
+Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
